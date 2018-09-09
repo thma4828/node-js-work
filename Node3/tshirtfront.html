@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Q'S TEES</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function logsign() {
+                document.getElementById("logbutt").style.color = "whitesmoke";
+                document.getElementById("hiddenlist1").style.visibility = "visible";
+                document.getElementById("loginusername").style.visibility = "visible";
+                document.getElementById("loginpasskey").style.visibility = "visible";
+            }
+            function browseMSTE() {
+                var tdiv = document.getElementById("MensTeesDiv");
+                tdiv.innerHTML += "<table><tr><td>D1</td><td>D2</td></tr><tr><td>D3</td><td>D4</td></tr></table";
+                document.getElementById("mste").style.color = "black";
+                document.getElementById("bbmste").onclick = "nullfoo()"
+            }
+            function nullfoo(){
+                //
+            }
+        </script>
+        <style> 
+    	div.menu {align-content: center; color:coral; background-color: black} 
+    	div.frontpage {align-content: center; background-color: black; color: coral}
+        #sitedesc {font-family: Tahoma, Geneva, sans-serif; text-shadow: -4px 0 whitesmoke, 0 4px whitesmoke, 4px 0 whitesmoke, 0 -4px whitesmoke;}
+        #p1 {font-family: Tahoma, Geneva, sans-serif; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        #p2 {font-family: Tahoma, Geneva, sans-serif; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+    	#mt1 {background-color: chocolate; color: black}
+        #mt2 {background-color: chocolate; color: black}
+        #wt1 {background-color: chocolate; color: whitesmoke}
+        #wt2 {background-color: chocolate; color: whitesmoke}
+        div.spons {background-color: crimson; color: cornflowerblue; position: relative}
+        #orderedlist {text-align: center; color: green; text-size: xx-large;}
+        #l1desc {background-color: crimson; color:cornflowerblue; text-align: center; font-size: x-large; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        #l2desc {background-color: crimson; color:cornflowerblue; text-align: center; font-size: x-large; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        body{background-color:black}
+        div.login {background-color: black; color:gold;}
+        #loginusername {color:gold; visibility: hidden}
+        #loginpasskey {color:gold; visibility: hidden}
+        #logbutt {background-color: black; color:gold; font-family: Tahoma, Geneva, sans-serif}
+        #hiddenlist1 {visibility: hidden}
+        #mste {font-family: Tahoma, Geneva, sans-serif; text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;}
+        #msta {font-family: Tahoma, Geneva, sans-serif; text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;}
+        #wste {font-family: Tahoma, Geneva, sans-serif; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        #wsta {font-family: Tahoma, Geneva, sans-serif; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        #slist {font-family: Tahoma, Geneva, sans-serif; font-size: xx-large; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        #img1 {position: relative}
+        #qsp {position: absolute; top: 0px; right: 10px}
+        #aboutme {color: whitesmoke; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        #myfb {color: whitesmoke; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        button.browsebutton {color: gold; background-color: navy; font-family: Tahoma, Geneva, sans-serif;}
+        #qdb1 {color: gold; font-family: Tahoma, Geneva, sans-serif;}
+	</style>
+    </head>
+    <body>
+        <div id='img1'>
+            <div id="qsp">
+                <p id="aboutme">design by Theodore Margoles</p>
+                <a href="https://www.facebook.com/theo.margoles" id="myfb">My Facebook Page</a>
+            </div>
+            
+        </div>
+        <div class='menu'>
+            <h1 id='sitedesc'>
+            Sports Tees
+            </h1>
+            <h5 id='bynote'>
+                American Made by Quinlan Conroy.
+            </h5>
+            <div class='login'>
+                <button onclick="logsign()" id='logbutt'>Click Here To Login</button>
+                <form action="http://127.0.0.1:8080/login" method="GET">
+                    <ol id='hiddenlist1'>
+                    <li id="loginusername">
+                        <p id='p1'>Enter Username</p>
+                        <input type="text" name="UserName" size="20" maxlength="30" >
+                    </li>
+                    <li id="loginpasskey">
+                        <p id='p2'>Enter Passkey</p>
+                         <input type="text" name="PassKey" size="20" maxlength="30" >
+                    </li>
+                    </ol>
+                   <input type="submit" id="Submit2" value="Submit" class="submit">
+                </form>
+                
+            </div>
+            <div class='qdb'>
+                <h3>
+                    <a href='http://127.0.0.1:8080/forms.html' id='qdb1'>Click here to query the database by product name</a>
+                </h3>
+            </div>
+        </div>
+        <div class='frontpage'>
+            <div id='mt1'>
+                <h3 id="mste">Mens Sports Tees</h3>
+                <button onclick="browseMSTE()" class="browsebutton" id="bbmste">Browse Male Tees</button>
+                <div id="MensTeesDiv"></div>
+            </div>
+            <div id='mt2'>
+                <h3 id='msta'>Mens Sports Tanks</h3>
+                <button onclick="browseMSTA()" class="browsebutton">Browse Male Tanks</button>
+            </div>
+            <div id='wt1'>
+                <h3 id='wste'>Womens Sports Tees</h3>
+                <button onclick="browseWSTE()" class="browsebutton">Browse Female Tees</button>
+            </div>
+            <div id='wt2'>
+                <h3 id='wsta'>Womens Sports Tanks</h3>
+                <button onclick="browseWSTA()" class="browsebutton">Browse Female Tanks</button>
+            </div>
+        </div>
+        <div class='spons'>
+            <div>
+                <h3 id='slist'>Sponsored Listings</h3>
+                <ol id='orderedlist'>
+                    <li>
+                        <p id='l1desc'>Simple black-red mens T; stretch fit.</p>
+                        <button onclick="buyl1()" id='buybutt'>Click Here to Buy Now!</button>
+                    </li>
+                    <li>
+                        <p id="l2desc">Mens Grey Button Up; formal</p>
+                        <button onclick="buyl2()" id="bbutt2">Click Here to Buy Now!</button>
+                    </li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "qstees",
+  "version": "1.0.0",
+  "description": "website that will sell tshirts.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "theodore margoles",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7",
+    "sql": "^0.78.0",
+    "url": "^0.11.0"
+  }
+}
